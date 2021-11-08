@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/nav_graph"
+    app:startDestination="@id/charactersFragment">
+    <fragment
+        android:id="@+id/charactersFragment"
+        android:name="com.santi.rickymortyapi.ui.characters.CharactersFragment"
+        android:label="Characters"
+        tools:layout="@layout/characters_fragment" >
+        <action
+            android:id="@+id/action_charactersFragment_to_characterDetailFragment"
+            app:destination="@id/characterDetailFragment" />
+        <action
+            android:id="@+id/action_charactersFragment_to_favoritesFragment"
+            app:destination="@id/favoritesFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/characterDetailFragment"
+        android:name="com.santi.rickymortyapi.ui.characterdetail.CharacterDetailFragment"
+        android:label="Character Detail"
+        tools:layout="@layout/character_detail_fragment" />
+    <fragment
+        android:id="@+id/favoritesFragment"
+        android:name="com.santi.rickymortyapi.ui.favorites.FavoritesFragment"
+        android:label="Favorites Detail"
+        tools:layout="@layout/favorites_fragment" >
+        <action
+            android:id="@+id/action_favoritesFragment_to_characterDetailFragment"
+            app:destination="@id/characterDetailFragment" />
+    </fragment>
+</navigation>
